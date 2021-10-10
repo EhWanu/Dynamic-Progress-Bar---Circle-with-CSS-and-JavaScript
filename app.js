@@ -24,6 +24,12 @@ const fakeUploadPercentage = [ 10, 25, 50, 75, 100,]
 const circumference = circle.getTotalLength();
 
 const interval = setInterval(()=>{
-    circle.style.strokeDashoffset = circumference - (fakeUploadPercentage[i] / 100) * circumference
+    circle.style.strokeDashoffset = 
+    circumference - (fakeUploadPercentage[i] / 100) * circumference
+    loading.innerHTML = fakeUploadPercentage[i] + '%'
     i++
+    if( i == fakeUploadPercentage.length){
+        clearInterval(interval)
+        loading.innerHTML = 'OK :)'
+    }
 },1000)
