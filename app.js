@@ -13,3 +13,9 @@
 //         loading.innerHTML = 'Complete!'
 //     }
 // }, 1000)
+
+const circumference = document
+    .querySelector('.progress-circle')
+    .getTotalLength();
+
+    console.log(circumference)

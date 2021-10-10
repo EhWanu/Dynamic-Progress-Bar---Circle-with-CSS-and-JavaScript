@@ -51,3 +51,8 @@
     right: 0;
     margin: auto;
 }
+
+.progress-circle {
+    stroke-dasharray: 0;
+    stroke-dashoffset: 0;
+}
