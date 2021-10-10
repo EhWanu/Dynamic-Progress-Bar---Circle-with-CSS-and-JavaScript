@@ -14,8 +14,16 @@
 //     }
 // }, 1000)
 
-const circumference = document
-    .querySelector('.progress-circle')
-    .getTotalLength();
+const circle = document
+.querySelector('.progress-circle')
+const loading = document.querySelector('.loading')
 
-    console.log(circumference)
+let i = 0
+const fakeUploadPercentage = [ 10, 25, 50, 75, 100,]
+
+const circumference = circle.getTotalLength();
+
+const interval = setInterval(()=>{
+    circle.style.strokeDashoffset = circumference - (fakeUploadPercentage[i] / 100) * circumference
+    i++
+},1000)
